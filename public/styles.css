@@ -1,0 +1,89 @@
+:root {
+  --font-family: 'Arial', sans-serif;
+  --heading-font-family: 'Georgia', serif;
+  --font-size: 21px;
+  --line-height: 1.5;
+  --color: #333;
+  --spacing: 16px;
+  --gradient-side: #fdfbfb;
+  --gradient-middle: #ebedee;
+  --gradient: linear-gradient(120deg, var(--gradient-side) 0%, var(--gradient-middle) 50%, var(--gradient-side) 100%);
+}
+
+html {
+  font-size: var(--spacing);
+  background-color: var(--gradient-middle);
+  background-image: var(--gradient);
+}
+
+body {
+  font-size: 1rem;
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+  color: var(--color);
+  min-height: 100vh;
+  margin: 0;
+  padding: 0 var(--spacing);
+  background-color: transparent;
+}
+
+a {
+  color: var(--color);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+a:visted {
+  color: var(--color);
+  opacity: 0.7;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--heading-font-family);
+  font-weight: normal;
+}
+
+p {
+  margin: 0 0 1rem 0;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  border: 2px solid var(--color);
+  border-radius: 4px;
+  background-color: transparent;
+  color: var(--color);
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  font-size: 1.4rem;
+}
+
+header,
+main,
+footer {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: var(--spacing) 0;
+}
+
+header {
+  text-align: center;
+  padding: 1rem 0;
+  margin-bottom: 1rem;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+nav ul li a {
+  display: block;
+  padding: 0.5rem 1rem;
+}
+

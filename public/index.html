@@ -2,18 +2,208 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Veronika Frankova</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {
-      background-color: #f2f2f2;
-      font-family: Arial, Helvetica, sans-serif;
-    }
-  </style>
+  <title>Veronika Frankova - Access Bars</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="initial-scale=1, viewport-fit=cover" />
+
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <h1>Veronika Fraňková</h1>
-  <p>Funguje to!</p>
+  <header>
+    <h1>Veronika Fraňková</h1>
+    <h2>Access bars</h2>
+    <nav>
+      <ul>
+        <li><a href="#co-je-to">Co je Access Bars</a></li>
+        <li><a href="#o-mne">O mně</a></li>
+        <li><a href="#cenik">Ceník</a></li>
+        <li><a href="#kontakty">Kontakty</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section id="co-je-to">
+      <h2>Co je Access Bars</h2>
+      <p>
+        <strong>Metoda Access Bars</strong> je jedním z nástrojů Access Consciousness
+        – přístupu do vědomí.
+      </p>
+      <p>
+        Jemná masáž, mačkání 32 bodů na hlavě, které uvolňují zablokovanou
+        energii. Tyto body mají své názvy a ovlivňují různé oblasti života.
+        Správnou kombinací mačkání těchto bodů se energie uvolňuje snáze.
+      </p>
+      <p>
+        Access Bars funguje také jako takový restart myšlenek, emocí,
+        přesvědčení, pocitů, postojů, které během našeho života
+        nashromáždíme.
+      </p>
+      <p>
+        Je bezpečné pro všechny věkové kategorie. Pro děti, dospělé i seniory.
+        Překážkou není ani zdravotní či psychický problém.
+      </p>
+    </section>
+    <section id="o-mne">
+      <h2>Kdo jsem?</h2>
+      <p>
+        Úplně obyčejná holka z vesnice.<br>
+        Né teď už žiji v Praze, a jsem milující manželka a maminka. Než jsem získala tu
+        nejúžasnější rodinu, musela jsem se hodně hledat.
+      <p>
+        Narodila jsem se s Retinoblastomem v obou očích. Měla jsem to štěstí, že mám
+        zbytky zraku na jednom oku. Podstoupila jsem léčbu, ozařování, chemoterapie.
+        Naštěstí si z té doby nic nepamatuji, ale pro moje rodiče to bylo asi náročné.
+        Pak přišly školy, věděla jsem, že jsem jiná, než ostatní děti, snažila jsem se
+        zapadnout, a myslím, že se mi to docela i dařilo. Chtěla jsem být jako ostatní. Nebylo
+        to vždy jednoduché, děti se mi smály, nebo si se mnou nechtěli hrát. Dodělala jsem
+        učební obor, Technickoadministrativní pracovnice. Chodila jsem i po brigádách. Pak
+        mi přišla do života i skvělá práce. Asistentka v občanské poradně. V práci mi bylo
+        umožněno, udělat si kurz pro pracovníky v sociálních službách a sociální pracovníky,
+        210 hodin. Postupem času jsem začala zjišťovat, že ale chci něco jiného, že vlastně
+        nejsem šťastná. Všichni kolem mě měli rodiny, partnery, a já ten stereotyp. Udělala
+        jsem pár chyb v životě. Hodně to bylo ovlivňováním okolí. Nerozhodovala sem se
+        sama za sebe. Byla jsem podceňována a sama jsem se podceňovala. Chybělo mi
+        sebevědomí.
+      </p>
+      <style>
+        button[name="more-about-me"] {
+          display: block;
+          margin: 2rem auto;
+        }
+        button[name="more-about-me"] ~ p {
+          display: none;
+        }
+      </style>
+      <button name="more-about-me" onclick="showAllParagraphsAfterButton()">
+        zobrazit více
+      </button>
+      <script>
+        function showAllParagraphsAfterButton() {
+          const button = document.querySelector("button[name='more-about-me']");
+          const paragraphs = Array.from(button.parentElement.querySelectorAll("p"));
+          paragraphs.forEach((p, index) => {
+            if (index > 0) {
+              p.style.display = "block";
+            }
+          });
+          button.style.display = "none";
+        }
+      </script>
+      <p>
+        Pak asi ve 28 letech jsem se rozhodla, že si pořídím vodícího pejska, z důvodu
+        zhoršování zraku kvůli šedému zákalu, a že si dodělám maturitu. Byly to jedny z
+        nejlepších rozhodnutí v mém životě. Lucky mi tenkrát pomohla hlavně po psychické
+        stránce. Školu, večerní studium při práci, jsem také zdárně dodělala. Maturita v oboru
+        Podnikání.
+      </p>
+      <p>
+        Při škole mezi druhým a třetím ročníkem jsem přišla kvůli rakovině o maminku, bylo
+        to těžké období.
+      </p>
+      <p>
+        V práci jsem byla asi 10 let a snažila jsem se nějak posunout, což mi tak úplně nešlo,
+        zpětně si uvědomuji, že jsem asi ani nechtěla, že potřebuji změnu.
+        Velký zlom v mém životě nastal, když jsem potkala, teď už, manžela, a rozhodli jsme
+        se založit rodinu. Odstěhovala jsem se za ním do Prahy. Pro mě ta největší a
+        nejkrásnější změna v životě. Máme spolu úžasnou dcerku.
+      </p>
+      <p>
+        Na jaře roku 2022 jsme s manželem začali mluvit o případné operaci šedého zákalu,
+        protože se mi zrak horšil víc a víc. Já jsem se operace hodně bála, protože v
+        minulosti mi lékaři řekli, že by to u mě byl veliký risk. Manžel mě podporoval, byli
+        jsme toto konzultovat na více specializovaných místech, kde mi potvrdili, že by
+        operace byla možná. U mě za celkové anestezie. Já v létě nevěděla, jak se k tomu
+        postavit. A celkově jsem potřebovala povzbudit své sebevědomí. Přes svoji
+        kamarádku jsem se dostala ke skvělé psychoterapeutce a koučce, mám už za sebou
+        několik koučů a psychologů, kteří mi krátkodobě pomohli, Ale ona na mě zkusila
+        metodu, do které jsem se časem úplně ponořila a nejen, že mi to pomohlo v osobním
+        životě, ale rozhodla jsem se díky tomu, také díky podpoře manžela, k operaci, v
+        lednu 2023,, a šla jsem na ni s tím, že nemůže dopadnout jinak, než dobře. Na sál
+        jsem šla s úsměvem. Operace se povedla, já jsem bez zákalu a vidím asi tak, jako v
+        dětství.
+      </p>
+      <p>
+        A co teď? Jsem po rodičovské dovolené a bez práce. Co vlastně chci dělat?
+        Tou metodou, která mi v životě moc pomohla je metoda Access Bars.
+        Dostala jsem nabídku, že bych mohla jít na kurz, abych mohla Access Bars
+        praktikovat. Půl roku jsem váhala, ale vnitřně jsem věděla, že to chci umět.
+        V září jsem kurz absolvovala. Bylo to neskutečné obohacení a byl to pro mě přínos.
+      </p>
+      <p>
+        Rozhodla jsem se, že právě Access Bars je ta cesta, kterou se chci dát. Mohu tím
+        přispět a pomoci jiným lidem, kteří mi to dovolí.
+      </p>
+    </section>
+    <section id="cenik">
+      <h2>Ceník</h2>
+      <p>
+        Cena terapie za 60 minut je 1 000 Kč<br>
+        Cena terapie za 90 minut je 1 400 Kč<br>
+        <br>
+        Také nabízím dárkové poukazy pro vaše blízké, kamarády, kterým můžete udělat s Access Bars radost.
+        V případě zájmů o poukaz mě prosím kontaktujte</p>
+      </p>
+    </section>
+    <section id="kontakty">
+      <h2>Kontakty</h2>
+      <address>
+        <p>Veronika Fraňková</p>
+        <p>Tel.: <a href="tel:+420724572273">+ 420 724 572 273</a></p>
+        <p>E-mail: <a href="mailto:v.kve@seznam.cz">v.kve@seznam.cz</a></p>
+      </address>
+      <p>
+        Terapie Access Bars provozuji v Praze a nedaleko Liberce.
+      </p>
+      <h3>Praha:</h3>
+      <address>
+        <p>Jana Růžičky 1235/6</p>
+        <p>148 00 Praha 4 Kunratice</p>
+        <p>v docházkové vzdálenosti od stanice a nákupního centra na Chodově, nebo nejbližší zastávka MHD je</p>
+        <p>U Kunratického lesa (BUS 177 a 203)</p>
+        <p><a href="https://goo.gl/maps/7Z3Z9Z9z3z9">google maps</a></p>
+      </address>
+      <h3>Jeřmanice (Liberec)</h3>
+      <address>
+        <p>Pastevní 219</p>
+        <p>463 12 Jeřmanice</p>
+        <p>Vesnice před Libercem u dálnice na Prahu.</p>
+      </address>
+    </section>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      button[name="back-to-top"] {
+        position: fixed;
+        bottom: 4vh;
+        right: 4vw;
+        display: none;
+      }
+    </style>
+    <!-- <button name="back-to-top">nahoru &#8593;</button> -->
+    <!-- <button name="back-to-top">nahoru &#x25B2;</button> -->
+    <!-- try different up character -->
+    <button name="back-to-top">&#x2B06;</button>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const button = document.querySelector("button[name='back-to-top']");
+        window.addEventListener("scroll", () => {
+          if (window.scrollY > 100) {
+            button.style.display = "block";
+          } else {
+            button.style.display = "none";
+          }
+        });
+        button.addEventListener("click", () => {
+          window.scrollTo(0, 0, "smooth");
+          window.location.hash = "";
+        });
+      });
+    </script>
+  </main>
+  <footer>
+    <p>&copy; 2024 Veronika Fraňková</p>
+  </footer>
 </body>
 </html>

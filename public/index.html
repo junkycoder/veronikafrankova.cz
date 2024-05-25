@@ -8,9 +8,9 @@
   <meta name="viewport" content="initial-scale=1, viewport-fit=cover" />
   <style>
     :root {
-      --font-family: 'Arial', sans-serif;
+      --font-family: system-ui, sans-serif;
       --heading-font-family: 'Georgia', serif;
-      --font-size: 21px;
+      --font-size: 1.25rem;
       --line-height: 1.5;
       --color: #333;
       --color-action: #007bff;
@@ -53,6 +53,12 @@
     h1, h2, h3, h4, h5, h6 {
       font-family: var(--heading-font-family);
       font-weight: normal;
+      -webkit-text-size-adjust: none;
+      text-size-adjust: none;
+    }
+    p {
+      -webkit-text-size-adjust: none;
+      text-size-adjust: none;
     }
     button {
       box-sizing: border-box;
@@ -146,7 +152,7 @@
           nav ul {
             flex-direction: row;
           }
-          h1, h2, h3, h4, h5, h6 {
+          h1, h2 {
             box-sizing: border-box;
             padding-top: 5rem;
           }

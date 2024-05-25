@@ -6,22 +6,100 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="initial-scale=1, viewport-fit=cover" />
+  <style>
+    :root {
+      --font-family: 'Arial', sans-serif;
+      --heading-font-family: 'Georgia', serif;
+      --font-size: 21px;
+      --line-height: 1.5;
+      --color: #333;
+      --color-action: #007bff;
+      --spacing: 16px;
+      --gradient-side: #fdfbfb;
+      --gradient-middle: #ebedee;
+      --gradient: linear-gradient(120deg, var(--gradient-side) 0%, var(--gradient-middle) 50%, var(--gradient-side) 100%);
+      --border-radius: 8px;
+      --max-width: 1024px;
+    }
+    html {
+      font-size: var(--spacing);
+      background-color: var(--gradient-middle);
+      background-image: var(--gradient);
+    }
 
-  <link rel="stylesheet" href="styles.css">
+    body {
+      font-size: 1rem;
+      font-family: var(--font-family);
+      font-size: var(--font-size);
+      line-height: var(--line-height);
+      color: var(--color);
+      min-height: 100vh;
+      margin: 0;
+      padding: 0 var(--spacing);
+      background-color: transparent;
+    }
+
+    a {
+      color: var(--color-action);
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    a:visted {
+      color: var(--color-action);
+      opacity: 0.7;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      font-family: var(--heading-font-family);
+      font-weight: normal;
+    }
+    button {
+      box-sizing: border-box;
+      padding: 0.5rem 1rem;
+      border: 2px solid var(--color);
+      border-radius: 4px;
+      background-color: transparent;
+      color: var(--color);
+      cursor: pointer;
+      transition: background-color 0.3s, color 0.3s;
+      font-size: 1.4rem;
+    }
+  </style>
 </head>
 <body>
+  <style>
+    header,
+    main,
+    footer {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: var(--spacing) 0;
+    }
+    header {
+      text-align: center;
+      padding: 1rem 0;
+      margin-bottom: 1rem;
+    }
+  </style>
   <header>
-    <h1>Veronika Fraňková</h1>
-    <h2>Access bars</h2>
-    <nav>
-      <ul>
-        <li><a href="#co-je-to">Co je Access Bars</a></li>
-        <li><a href="#o-mne">O mně</a></li>
-        <li><a href="#cenik">Ceník</a></li>
-        <li><a href="#kontakty">Kontakty</a></li>
-      </ul>
-    </nav>
-    <!==
+    <h1 class="blažena">Access bars</h1>
+    <h2 class="blažena">Veronika Fraňková</h2>
+    <style>
+      h1.blažena {
+        font-size: 4rem;
+        margin-top: 4rem;
+        margin-bottom: 0;
+        padding-top: 0;
+      }
+      h2.blažena {
+        font-size: 2rem;
+        margin-top: 0;
+        margin-bottom: 4rem;
+        padding-top: 0;
+      }
+    </style>
+    <!--
      https://res.cloudinary.com/dzfx6epxu/image/upload/f_auto,q_auto/v1/veronikafrankova/cnmb2v9qpdap8x9a1xzp
      https://res.cloudinary.com/dzfx6epxu/image/upload/f_auto,q_auto/v1/veronikafrankova/bztljexggwscbfvvgwq0
      https://res.cloudinary.com/dzfx6epxu/image/upload/f_auto,q_auto/v1/veronikafrankova/cs5upo4whkfhtjvacwir
@@ -31,8 +109,57 @@
      https://res.cloudinary.com/dzfx6epxu/image/upload/f_auto,q_auto/v1/veronikafrankova/hr2ob8azmyv7jnqel9cq
      https://res.cloudinary.com/dzfx6epxu/image/upload/f_auto,q_auto/v1/veronikafrankova/dqtoorkzez0gbqrqatw8
      -->
-
+    <!--
+      make native gallery of vertical photos rotationg every 5 seconds
+    -->
   </header>
+    <nav>
+      <style>
+        nav ul {
+          list-style: none;
+          padding: 0;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          background-color: var(--color-action);
+          border-radius: var(--border-radius);
+          max-width: var(--max-width);
+          margin: 0 auto;
+        }
+        nav ul li {
+          flex: 1;
+        }
+        nav ul li:first-child {
+          flex: 2;
+        }
+        nav ul li a {
+          display: block;
+          padding: 0.5rem 1rem;
+          color: white;
+          cursor: pointer;
+        }
+        @media (min-width: 768px) {
+          nav {
+            position: sticky;
+            top: 1rem;
+          }
+          nav ul {
+            flex-direction: row;
+          }
+          h1, h2, h3, h4, h5, h6 {
+            box-sizing: border-box;
+            padding-top: 5rem;
+          }
+        }
+      }
+      </style>
+      <ul>
+        <li><a href="#co-je-to">Co je Access Bars?</a></li>
+        <li><a href="#o-mne">O mně</a></li>
+        <li><a href="#cenik">Ceník</a></li>
+        <li><a href="#kontakty">Kontakty</a></li>
+      </ul>
+    </nav>
   <main>
     <section id="co-je-to">
       <h2>Co je Access Bars?</h2>
@@ -57,6 +184,31 @@
     </section>
     <section id="o-mne">
       <h2>Kdo jsem?</h2>
+      <style>
+        picture {
+          display: block;
+          overflow-x: auto;
+          white-space: nowrap;
+          scroll-snap-type: x mandatory;
+          scroll-behavior: smooth;
+        }
+        img {
+          display: inline-block;
+          width: min(100%, 320px);
+          height: 100%;
+          scroll-snap-align: start;
+        }
+      </style>
+      <picture>
+        <img src="https://res.cloudinary.com/dzfx6epxu/image/upload/f_auto,q_auto/v1/veronikafrankova/cnmb2v9qpdap8x9a1xzp" alt="Veronika Frankova - Access Bars" class="active">
+        <img src="https://res.cloudinary.com/dzfx6epxu/image/upload/f_auto,q_auto/v1/veronikafrankova/bztljexggwscbfvvgwq0" alt="Veronika Frankova - Access Bars">
+        <img src="https://res.cloudinary.com/dzfx6epxu/image/upload/f_auto,q_auto/v1/veronikafrankova/cs5upo4whkfhtjvacwir" alt="Veronika Frankova - Access Bars">
+        <img src="https://res.cloudinary.com/dzfx6epxu/image/upload/f_auto,q_auto/v1/veronikafrankova/e2quzcszvurse9pfrjrg" alt="Veronika Frankova - Access Bars">
+        <img src="https://res.cloudinary.com/dzfx6epxu/image/upload/f_auto,q_auto/v1/veronikafrankova/x5rgqkgge8hnbuu5anlo" alt="Veronika Frankova - Access Bars">
+        <img src="https://res.cloudinary.com/dzfx6epxu/image/upload/f_auto,q_auto/v1/veronikafrankova/wvvxd6o30awa73xic2gz" alt="Veronika Frankova - Access Bars">
+        <!-- <img src="https://res.cloudinary.com/dzfx6epxu/image/upload/f_auto,q_auto/v1/veronikafrankova/hr2ob8azmyv7jnqel9cq" alt="Veronika Frankova - Access Bars"> -->
+        <img src="https://res.cloudinary.com/dzfx6epxu/image/upload/f_auto,q_auto/v1/veronikafrankova/dqtoorkzez0gbqrqatw8" alt="Veronika Frankova - Access Bars">
+      </picture>
       <p>
         Úplně obyčejná holka z vesnice.<br>
         Né teď už žiji v Praze, a jsem milující manželka a maminka. Než jsem získala tu
@@ -157,6 +309,13 @@
       </p>
     </section>
     <section id="kontakty">
+      <style>
+        iframe.google-map {
+          width: 100%;
+          height: 400px;
+          border: 0;
+        }
+      </style>
       <h2>Kontakty</h2>
       <address>
         <p>Veronika Fraňková</p>
